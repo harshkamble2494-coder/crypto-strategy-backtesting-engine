@@ -1,0 +1,14 @@
+{
+  "validation_dataset": "SOL_Y2_2025_2026",
+  "symbol": "SOLUSDT",
+  "csv_path": "C:\\Users\\Harsh\\OneDrive\\Documents\\Crypto Futures Trading Bot\\data\\raw\\validation\\SOLUSDT_1h_2y.csv",
+  "start_date": "2025-06-29T08:00:00Z",
+  "end_date": "2026-06-29T08:00:00Z",
+  "strategy_label": "V4_T2",
+  "strategy_name": "trend_quality_ema_rsi_v2",
+  "exit_mode": "fixed",
+  "circuit_breaker_enabled": true,
+  "circuit_breaker_consecutive_loss_threshold": 2,
+  "circuit_breaker_cooldown_candles": 24,
+  "circuit_breaker_resume_mode": "candles"
+}

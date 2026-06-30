@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "validation_dataset": "BTC_OOS_2022_2024",
+    "symbol": "BTCUSDT",
+    "csv_path": "C:\\Users\\Harsh\\OneDrive\\Documents\\Crypto Futures Trading Bot\\data\\raw\\validation\\BTCUSDT_1h_4y.csv",
+    "start_date": "2022-06-29T08:00:00Z",
+    "end_date": "2024-06-25T09:00:00Z",
+    "strategy_label": "V2",
+    "strategy_name": "trend_quality_ema_rsi_v2",
+    "exit_mode": "fixed",
+    "circuit_breaker_enabled": false,
+    "circuit_breaker_consecutive_loss_threshold": 3,
+    "circuit_breaker_cooldown_candles": 24,
+    "circuit_breaker_resume_mode": "candles"
+  },
+  "metrics": {
+    "net_profit": -1499.5247598280166,
+    "total_return_pct": -14.995247598280168,
+    "cagr_pct": -7.838027246260825,
+    "win_rate_pct": 23.076923076923077,
+    "profit_factor": 0.5061306818815887,
+    "sharpe_ratio": -1.3095706227747288,
+    "maximum_drawdown_pct": 16.94946961198004,
+    "average_win": 170.75040824376083,
+    "average_loss": -101.20928113406208,
+    "largest_win": 183.9046904449102,
+    "largest_loss": -109.95330751250015,
+    "total_trades": 39,
+    "long_trades": 21,
+    "long_win_rate_pct": 28.57142857142857,
+    "short_trades": 18,
+    "short_win_rate_pct": 16.666666666666664,
+    "average_holding_time": "1 days 05:16:55.384615384"
+  }
+}

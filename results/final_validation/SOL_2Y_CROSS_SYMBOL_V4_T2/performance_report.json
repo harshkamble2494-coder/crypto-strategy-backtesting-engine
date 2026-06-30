@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "validation_dataset": "SOL_2Y_CROSS_SYMBOL",
+    "symbol": "SOLUSDT",
+    "csv_path": "C:\\Users\\Harsh\\OneDrive\\Documents\\Crypto Futures Trading Bot\\data\\raw\\validation\\SOLUSDT_1h_2y.csv",
+    "start_date": null,
+    "end_date": null,
+    "strategy_label": "V4_T2",
+    "strategy_name": "trend_quality_ema_rsi_v2",
+    "exit_mode": "fixed",
+    "circuit_breaker_enabled": true,
+    "circuit_breaker_consecutive_loss_threshold": 2,
+    "circuit_breaker_cooldown_candles": 24,
+    "circuit_breaker_resume_mode": "candles"
+  },
+  "metrics": {
+    "net_profit": -1992.3507033447768,
+    "total_return_pct": -19.92350703344777,
+    "cagr_pct": -10.523042681267302,
+    "win_rate_pct": 17.94871794871795,
+    "profit_factor": 0.34544166165371215,
+    "sharpe_ratio": -1.774081551093508,
+    "maximum_drawdown_pct": 24.19310496450614,
+    "average_win": 150.20835909843527,
+    "average_loss": -95.11903803230683,
+    "largest_win": 164.46564108967965,
+    "largest_loss": -109.95330751249972,
+    "total_trades": 39,
+    "long_trades": 19,
+    "long_win_rate_pct": 15.789473684210526,
+    "short_trades": 20,
+    "short_win_rate_pct": 20.0,
+    "average_holding_time": "0 days 09:13:50.769230769"
+  }
+}

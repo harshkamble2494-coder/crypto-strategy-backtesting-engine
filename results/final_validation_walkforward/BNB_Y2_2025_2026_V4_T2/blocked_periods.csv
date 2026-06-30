@@ -1,0 +1,4 @@
+start_time,end_time,resume_mode,consecutive_losses,blocked_signals,duration_candles
+2025-10-30 07:00:00+00:00,2025-10-31 06:00:00+00:00,candles,2,1,24
+2025-12-09 20:00:00+00:00,2025-12-10 19:00:00+00:00,candles,2,0,24
+2026-06-16 13:00:00+00:00,2026-06-17 12:00:00+00:00,candles,2,0,24

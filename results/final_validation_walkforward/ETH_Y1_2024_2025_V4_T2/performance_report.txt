@@ -1,0 +1,30 @@
+validation_dataset: ETH_Y1_2024_2025
+symbol: ETHUSDT
+csv_path: C:\Users\Harsh\OneDrive\Documents\Crypto Futures Trading Bot\data\raw\validation\ETHUSDT_1h_2y.csv
+start_date: 2024-06-28T20:00:00Z
+end_date: 2025-06-29T07:00:00Z
+strategy_label: V4_T2
+strategy_name: trend_quality_ema_rsi_v2
+exit_mode: fixed
+circuit_breaker_enabled: True
+circuit_breaker_consecutive_loss_threshold: 2
+circuit_breaker_cooldown_candles: 24
+circuit_breaker_resume_mode: candles
+
+net_profit: -421.81242117676993
+total_return_pct: -4.2181242117677
+cagr_pct: -4.216241464219495
+win_rate_pct: 25.0
+profit_factor: 0.5649512401013466
+sharpe_ratio: -1.037112606289254
+maximum_drawdown_pct: 6.454097256474611
+average_win: 182.58754144361583
+average_loss: -107.7305606119574
+largest_win: 187.80864140676957
+largest_loss: -110.8093526594162
+total_trades: 12
+long_trades: 3
+long_win_rate_pct: 33.33333333333333
+short_trades: 9
+short_win_rate_pct: 22.22222222222222
+average_holding_time: 0 days 06:05:00

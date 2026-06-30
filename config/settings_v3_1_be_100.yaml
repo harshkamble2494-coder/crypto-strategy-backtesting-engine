@@ -1,0 +1,51 @@
+project:
+  name: "Crypto Futures Trading Bot"
+  timezone: "UTC"
+
+data:
+  symbol: "BTCUSDT"
+  timeframe: "1h"
+  csv_path: "data/raw/BTCUSDT_1h.csv"
+  start_date: null
+  end_date: null
+  default_lookback_years: 2
+
+backtest:
+  initial_capital: 10000.0
+  results_dir: "results/backtests"
+
+strategy:
+  name: "trend_quality_ema_rsi_v2"
+  ema_fast: 9
+  ema_slow: 21
+  ema_trend: 200
+  rsi_length: 14
+  rsi_long_threshold: 58.0
+  rsi_short_threshold: 42.0
+  cooldown_candles: 3
+  atr_length: 14
+  adx_length: 14
+  volume_sma_length: 20
+  trend_slope_lookback: 24
+  min_adx: 22.0
+  min_trend_distance_atr: 0.35
+  min_volume_ratio: 0.9
+
+risk:
+  leverage: 2.0
+  risk_per_trade: 0.01
+  stop_loss_pct: 0.015
+  take_profit_pct: 0.03
+  max_daily_loss_pct: 0.03
+  exit_mode: "fixed"
+  break_even_enabled: true
+  break_even_trigger_atr_multiplier: 1.0
+
+costs:
+  fee_rate: 0.0005
+  slippage_pct: 0.0005
+
+logging:
+  level: "INFO"
+  file_path: "logs/backtest.log"
+

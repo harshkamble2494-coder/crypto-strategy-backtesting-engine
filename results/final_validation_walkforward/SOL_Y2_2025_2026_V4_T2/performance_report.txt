@@ -1,0 +1,30 @@
+validation_dataset: SOL_Y2_2025_2026
+symbol: SOLUSDT
+csv_path: C:\Users\Harsh\OneDrive\Documents\Crypto Futures Trading Bot\data\raw\validation\SOLUSDT_1h_2y.csv
+start_date: 2025-06-29T08:00:00Z
+end_date: 2026-06-29T08:00:00Z
+strategy_label: V4_T2
+strategy_name: trend_quality_ema_rsi_v2
+exit_mode: fixed
+circuit_breaker_enabled: True
+circuit_breaker_consecutive_loss_threshold: 2
+circuit_breaker_cooldown_candles: 24
+circuit_breaker_resume_mode: candles
+
+net_profit: 134.7814112496344
+total_return_pct: 1.3478141124963439
+cagr_pct: 1.3488984882193966
+win_rate_pct: 40.0
+profit_factor: 1.1364419023960832
+sharpe_ratio: 0.24744248919292677
+maximum_drawdown_pct: 5.359219196874509
+average_win: 187.10191018825512
+average_loss: -109.75889443109993
+largest_win: 190.32506364568968
+largest_loss: -112.26948752560376
+total_trades: 15
+long_trades: 5
+long_win_rate_pct: 40.0
+short_trades: 10
+short_win_rate_pct: 40.0
+average_holding_time: 0 days 14:28:00

@@ -1,0 +1,30 @@
+validation_dataset: BNB_Y2_2025_2026
+symbol: BNBUSDT
+csv_path: C:\Users\Harsh\OneDrive\Documents\Crypto Futures Trading Bot\data\raw\validation\BNBUSDT_1h_2y.csv
+start_date: 2025-06-29T08:00:00Z
+end_date: 2026-06-29T08:00:00Z
+strategy_label: V4_T2
+strategy_name: trend_quality_ema_rsi_v2
+exit_mode: fixed
+circuit_breaker_enabled: True
+circuit_breaker_consecutive_loss_threshold: 2
+circuit_breaker_cooldown_candles: 24
+circuit_breaker_resume_mode: candles
+
+net_profit: -496.01375628783353
+total_return_pct: -4.9601375628783355
+cagr_pct: -4.964001539346652
+win_rate_pct: 20.0
+profit_factor: 0.42376415180098714
+sharpe_ratio: -1.3249778752013388
+maximum_drawdown_pct: 5.461369052305631
+average_win: 182.3843911931883
+average_loss: -107.59781733427613
+largest_win: 183.09075742733825
+largest_loss: -109.95330751249963
+total_trades: 10
+long_trades: 5
+long_win_rate_pct: 40.0
+short_trades: 5
+short_win_rate_pct: 0.0
+average_holding_time: 1 days 01:18:00

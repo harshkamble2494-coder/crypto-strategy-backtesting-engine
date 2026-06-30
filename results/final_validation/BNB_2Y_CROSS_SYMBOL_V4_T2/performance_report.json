@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "validation_dataset": "BNB_2Y_CROSS_SYMBOL",
+    "symbol": "BNBUSDT",
+    "csv_path": "C:\\Users\\Harsh\\OneDrive\\Documents\\Crypto Futures Trading Bot\\data\\raw\\validation\\BNBUSDT_1h_2y.csv",
+    "start_date": null,
+    "end_date": null,
+    "strategy_label": "V4_T2",
+    "strategy_name": "trend_quality_ema_rsi_v2",
+    "exit_mode": "fixed",
+    "circuit_breaker_enabled": true,
+    "circuit_breaker_consecutive_loss_threshold": 2,
+    "circuit_breaker_cooldown_candles": 24,
+    "circuit_breaker_resume_mode": "candles"
+  },
+  "metrics": {
+    "net_profit": 45.93176734101871,
+    "total_return_pct": 0.45931767341018714,
+    "cagr_pct": 0.22959238412427752,
+    "win_rate_pct": 37.5,
+    "profit_factor": 1.0200578931198863,
+    "sharpe_ratio": 0.07028891190910862,
+    "maximum_drawdown_pct": 6.210145236991005,
+    "average_win": 194.65762406313993,
+    "average_loss": -114.49798607083297,
+    "largest_win": 199.60977814294947,
+    "largest_loss": -117.872135286341,
+    "total_trades": 32,
+    "long_trades": 16,
+    "long_win_rate_pct": 50.0,
+    "short_trades": 16,
+    "short_win_rate_pct": 25.0,
+    "average_holding_time": "1 days 00:01:52.500000"
+  }
+}

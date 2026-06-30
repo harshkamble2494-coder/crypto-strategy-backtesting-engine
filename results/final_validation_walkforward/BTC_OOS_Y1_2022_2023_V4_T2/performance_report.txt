@@ -1,0 +1,30 @@
+validation_dataset: BTC_OOS_Y1_2022_2023
+symbol: BTCUSDT
+csv_path: C:\Users\Harsh\OneDrive\Documents\Crypto Futures Trading Bot\data\raw\validation\BTCUSDT_1h_4y.csv
+start_date: 2022-06-29T08:00:00Z
+end_date: 2023-06-29T07:00:00Z
+strategy_label: V4_T2
+strategy_name: trend_quality_ema_rsi_v2
+exit_mode: fixed
+circuit_breaker_enabled: True
+circuit_breaker_consecutive_loss_threshold: 2
+circuit_breaker_cooldown_candles: 24
+circuit_breaker_resume_mode: candles
+
+net_profit: -662.5375653566916
+total_return_pct: -6.625375653566916
+cagr_pct: -6.6312223609545695
+win_rate_pct: 23.52941176470588
+profit_factor: 0.5219119939811186
+sharpe_ratio: -1.2725310519179307
+maximum_drawdown_pct: 7.481792294465994
+average_win: 180.81728545238227
+average_loss: -106.60051593586293
+largest_win: 185.9510189441112
+largest_loss: -109.95330751250015
+total_trades: 17
+long_trades: 10
+long_win_rate_pct: 40.0
+short_trades: 7
+short_win_rate_pct: 0.0
+average_holding_time: 0 days 16:42:21.176470588

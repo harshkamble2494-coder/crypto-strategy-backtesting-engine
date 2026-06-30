@@ -1,0 +1,14 @@
+{
+  "validation_dataset": "SOL_2Y_CROSS_SYMBOL",
+  "symbol": "SOLUSDT",
+  "csv_path": "C:\\Users\\Harsh\\OneDrive\\Documents\\Crypto Futures Trading Bot\\data\\raw\\validation\\SOLUSDT_1h_2y.csv",
+  "start_date": null,
+  "end_date": null,
+  "strategy_label": "V4_T2",
+  "strategy_name": "trend_quality_ema_rsi_v2",
+  "exit_mode": "fixed",
+  "circuit_breaker_enabled": true,
+  "circuit_breaker_consecutive_loss_threshold": 2,
+  "circuit_breaker_cooldown_candles": 24,
+  "circuit_breaker_resume_mode": "candles"
+}

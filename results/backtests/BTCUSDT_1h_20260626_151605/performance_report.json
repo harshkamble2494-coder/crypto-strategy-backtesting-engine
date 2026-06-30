@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "strategy_name": "trend_quality_ema_rsi_v2",
+    "exit_mode": "fixed",
+    "stop_loss_pct": 0.015,
+    "take_profit_pct": 0.03,
+    "atr_stop_loss_multiplier": 1.5,
+    "atr_take_profit_multiplier": 3.0,
+    "break_even_enabled": true,
+    "break_even_trigger_atr_multiplier": 0.75
+  },
+  "metrics": {
+    "net_profit": -798.0325085414825,
+    "total_return_pct": -7.980325085414824,
+    "cagr_pct": -4.08177825964885,
+    "win_rate_pct": 7.142857142857142,
+    "profit_factor": 0.4005518606147824,
+    "sharpe_ratio": -1.2853045206422862,
+    "maximum_drawdown_pct": 8.689469953549999,
+    "average_win": 177.74871314984443,
+    "average_loss": -34.13534994848759,
+    "largest_win": 180.00828050972646,
+    "largest_loss": -109.93663087139566,
+    "total_trades": 42,
+    "long_trades": 19,
+    "long_win_rate_pct": 5.263157894736842,
+    "short_trades": 23,
+    "short_win_rate_pct": 8.695652173913043,
+    "average_holding_time": "0 days 05:24:17.142857142"
+  }
+}

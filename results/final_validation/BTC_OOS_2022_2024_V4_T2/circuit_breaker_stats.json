@@ -1,0 +1,6 @@
+{
+  "blocked_trades": 3,
+  "cooldown_periods": 13,
+  "average_cooldown_duration": 24.0,
+  "consecutive_loss_clusters": 13
+}
