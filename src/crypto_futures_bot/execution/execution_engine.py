@@ -42,19 +42,21 @@ class ExecutionEngine:
     def check_exit(self, position: Position, candle: pd.Series, opposite_signal: bool) -> tuple[float, str] | None:
         if position.side == PositionSide.LONG:
             if candle["low"] <= position.stop_loss:
-                return position.stop_loss, "BREAK_EVEN_STOP" if position.break_even_activated else "STOP_LOSS"
+                return position.stop_loss, self._stop_exit_reason(position)
             self._activate_break_even_if_triggered(position, candle)
+            self._update_trailing_stop(position, candle)
             if candle["low"] <= position.stop_loss:
-                return position.stop_loss, "BREAK_EVEN_STOP"
-            if candle["high"] >= position.take_profit:
+                return position.stop_loss, self._stop_exit_reason(position)
+            if self.risk_config.take_profit_enabled and candle["high"] >= position.take_profit:
                 return position.take_profit, "TAKE_PROFIT"
         else:
             if candle["high"] >= position.stop_loss:
-                return position.stop_loss, "BREAK_EVEN_STOP" if position.break_even_activated else "STOP_LOSS"
+                return position.stop_loss, self._stop_exit_reason(position)
             self._activate_break_even_if_triggered(position, candle)
+            self._update_trailing_stop(position, candle)
             if candle["high"] >= position.stop_loss:
-                return position.stop_loss, "BREAK_EVEN_STOP"
-            if candle["low"] <= position.take_profit:
+                return position.stop_loss, self._stop_exit_reason(position)
+            if self.risk_config.take_profit_enabled and candle["low"] <= position.take_profit:
                 return position.take_profit, "TAKE_PROFIT"
 
         if opposite_signal:
@@ -132,6 +134,38 @@ class ExecutionEngine:
         elif position.side == PositionSide.SHORT and candle["low"] <= position.entry_price - trigger_distance:
             position.stop_loss = position.entry_price
             position.break_even_activated = True
+
+    def _update_trailing_stop(self, position: Position, candle: pd.Series) -> None:
+        if not self.risk_config.trailing_stop_enabled:
+            return
+        if position.entry_atr is None or pd.isna(position.entry_atr) or position.entry_atr <= 0:
+            return
+
+        activation_distance = position.entry_atr * self.risk_config.trailing_stop_activation_atr_multiplier
+        trailing_distance = position.entry_atr * self.risk_config.trailing_stop_atr_multiplier
+
+        if position.side == PositionSide.LONG:
+            if candle["high"] < position.entry_price + activation_distance:
+                return
+            new_stop = candle["high"] - trailing_distance
+            if new_stop > position.stop_loss:
+                position.stop_loss = new_stop
+                position.trailing_stop_activated = True
+        else:
+            if candle["low"] > position.entry_price - activation_distance:
+                return
+            new_stop = candle["low"] + trailing_distance
+            if new_stop < position.stop_loss:
+                position.stop_loss = new_stop
+                position.trailing_stop_activated = True
+
+    @staticmethod
+    def _stop_exit_reason(position: Position) -> str:
+        if position.trailing_stop_activated:
+            return "TRAILING_STOP"
+        if position.break_even_activated:
+            return "BREAK_EVEN_STOP"
+        return "STOP_LOSS"
 
     def _apply_entry_slippage(self, price: float, side: PositionSide) -> float:
         multiplier = 1 + self.cost_config.slippage_pct if side == PositionSide.LONG else 1 - self.cost_config.slippage_pct

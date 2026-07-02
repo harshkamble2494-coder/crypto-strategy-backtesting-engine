@@ -22,6 +22,7 @@ class Position:
     entry_fee: float
     entry_atr: float | None = None
     break_even_activated: bool = False
+    trailing_stop_activated: bool = False
 
     @property
     def notional(self) -> float:

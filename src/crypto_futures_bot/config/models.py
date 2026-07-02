@@ -39,6 +39,8 @@ class StrategyConfig:
     name: str = "ema_rsi_v1"
     atr_length: int = 14
     adx_length: int = 14
+    use_adx_filter: bool = False
+    use_trend_slope_filter: bool = False
     volume_sma_length: int = 20
     trend_slope_lookback: int = 24
     min_adx: float = 20.0
@@ -54,10 +56,14 @@ class RiskConfig:
     take_profit_pct: float
     max_daily_loss_pct: float
     exit_mode: str = "fixed"
+    take_profit_enabled: bool = True
     atr_stop_loss_multiplier: float = 1.5
     atr_take_profit_multiplier: float = 3.0
     break_even_enabled: bool = False
     break_even_trigger_atr_multiplier: float = 1.0
+    trailing_stop_enabled: bool = False
+    trailing_stop_activation_atr_multiplier: float = 1.0
+    trailing_stop_atr_multiplier: float = 2.0
 
 
 @dataclass(frozen=True)

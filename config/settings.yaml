@@ -23,6 +23,11 @@ strategy:
   rsi_long_threshold: 55.0
   rsi_short_threshold: 45.0
   cooldown_candles: 1
+  adx_length: 14
+  use_adx_filter: true
+  min_adx: 20.0
+  trend_slope_lookback: 24
+  use_trend_slope_filter: true
 
 risk:
   leverage: 2.0
@@ -30,6 +35,10 @@ risk:
   stop_loss_pct: 0.015
   take_profit_pct: 0.03
   max_daily_loss_pct: 0.03
+  take_profit_enabled: true
+  trailing_stop_enabled: false
+  trailing_stop_activation_atr_multiplier: 1.0
+  trailing_stop_atr_multiplier: 2.0
 
 costs:
   fee_rate: 0.0005
